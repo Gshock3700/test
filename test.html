@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Toolkit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="timer">Timer</button>
+      <button class="tab-btn" data-tab="calculator">Calculator</button>
+      <button class="tab-btn" data-tab="notes">Notes</button>
+      <button class="tab-btn" data-tab="converter">Converter</button>
+    </div>
+
+    <div class="tab-content" id="timer">
+      <h2>Study Timer</h2>
+      <div class="timer-display">25:00</div>
+      <button id="start-timer">Start</button>
+      <button id="reset-timer">Reset</button>
+    </div>
+
+    <div class="tab-content" id="calculator" style="display: none;">
+      <h2>Calculator</h2>
+      <input type="text" id="calc-display" readonly>
+      <div class="calc-buttons">
+        <button>7</button><button>8</button><button>9</button><button>+</button>
+        <button>4</button><button>5</button><button>6</button><button>-</button>
+        <button>1</button><button>2</button><button>3</button><button>×</button>
+        <button>0</button><button>.</button><button>=</button><button>÷</button>
+        <button>C</button>
+      </div>
+    </div>
+
+    <div class="tab-content" id="notes" style="display: none;">
+      <h2>Quick Notes</h2>
+      <textarea id="notes-area" placeholder="Type your notes here..."></textarea>
+      <button id="save-notes">Save</button>
+    </div>
+
+    <div class="tab-content" id="converter" style="display: none;">
+      <h2>Unit Converter</h2>
+      <select id="conversion-type">
+        <option value="length">Length</option>
+        <option value="mass">Mass</option>
+        <option value="temperature">Temperature</option>
+      </select>
+      <input type="number" id="convert-input">
+      <select id="from-unit"></select>
+      <select id="to-unit"></select>
+      <div id="conversion-result"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
